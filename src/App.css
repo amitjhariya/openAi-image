@@ -1,0 +1,96 @@
+header {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  background-color: azure;
+}
+
+li {
+  list-style-type: none;
+  padding: 20px 30px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(13, 26, 49);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+a:hover {
+  color: rgb(66, 103, 165);
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: azure;
+}
+
+footer > p {
+  color: crimson;
+  /* color: rgb(13, 26, 49); */
+  font-size: 18px;
+  font-weight: 500;
+}
+
+form {
+  width: 500px;
+  display: flex;
+  background-color: azure;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  width: max-content;
+  padding: 20px;
+}
+
+button {
+  width: 150px;
+  padding: 10px;
+  background-color: aqua;
+  border: none;
+  border-radius: 5px;
+  color: aliceblue;
+  /* margin: 20px;     */
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px 0;
+  outline: none;
+  border-radius: 5px;
+  margin: 10px;
+  border-color: aqua;
+}
+input {
+  text-align: center;
+  width: 200px;
+}
+
+select {
+  width: 150px;
+}
+img {
+  width: 100%;
+}
+
+.image {
+  margin: 0 auto;
+  background-color: azure;
+  width: 500px;
+  height: 500px;
+  margin-top: 50px;
+  padding: 40px;
+}
