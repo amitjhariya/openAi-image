@@ -13,7 +13,7 @@ function Home() {
 
   const postData = async (data) => {
    try {
-    const response=await fetch('http://localhost:8000/api/v1/image', {
+    const response= await fetch('http://localhost:8000/api/v1/image', {
       method: 'POST',
       body: JSON.stringify(data),
       cache: 'no-cache',
@@ -21,15 +21,18 @@ function Home() {
         'Content-Type': 'application/json'
       }
     })
-    return response.json();
+    return await response.json();
    } catch (error) {
     return error
    }
   }
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if(!data.search) return
     setIsLoading(true)
+    
     postData(data).then(res=>{
-      setIsLoading(false)
+      setData(initialData)
       setImageUrl(res.data)
     }).catch(err=>{
       setIsLoading(false)
@@ -39,7 +42,7 @@ function Home() {
   return (
     <>
       <section>
-        <form >
+        <form onSubmit={handleSubmit} >
           <input name='search' autoComplete='off' onChange={handleChange} value={data.search} />
           <select name='size' onChange={handleChange} >
             <option value="small"> Small </option>
@@ -50,7 +53,7 @@ function Home() {
         </form>
         {isLoading && <Loader/>}
         <div className='image'>
-        {imageUrl && <img alt='image generated' src={imageUrl}/>}
+        {imageUrl && <img alt='image generated' src={imageUrl} onLoad={()=>setIsLoading(false)}/>}
         </div>
       </section>
     </>
