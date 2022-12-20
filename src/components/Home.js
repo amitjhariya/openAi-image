@@ -40,7 +40,7 @@ function Home() {
     <>
       <section>
         <form >
-          <input name='search' onChange={handleChange} value={data.search} />
+          <input name='search' autoComplete='off' onChange={handleChange} value={data.search} />
           <select name='size' onChange={handleChange} >
             <option value="small"> Small </option>
             <option value="medium"> Medium </option>

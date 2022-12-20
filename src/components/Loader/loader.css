@@ -1,3 +1,8 @@
+.loading{
+  display: flex;
+  justify-content: center;
+}
+
 .loading span {
     display: inline-block;
     vertical-align: middle;
@@ -8,7 +13,7 @@
     border-radius: .6em;
     animation: loading 1s infinite alternate;
   }
-  
+
   /*
    * Dots Colors
    * Smarter targeting vs nth-of-type?
